@@ -6,10 +6,9 @@ using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 0.5f;
     [SerializeField] private Vector2 limitX = new Vector2(-5, 5f);
 
-    private float _moveDirection = 0f;
 
     /*void Update()
     {
@@ -33,6 +32,6 @@ public class Player : MonoBehaviour
     public void Move(float delta)
     {
         float targetX = Mathf.Clamp(transform.position.x + delta, limitX.x, limitX.y);
-        transform.DOMoveX(targetX, 0.5f);
+        transform.DOMoveX(targetX, moveSpeed);
     }
 }

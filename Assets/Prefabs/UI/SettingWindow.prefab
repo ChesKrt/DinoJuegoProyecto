@@ -266,7 +266,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -798,6 +798,8 @@ MonoBehaviour:
   animationTime: 0.5
   easeShow: 26
   easeHide: 27
+  _closeButton: {fileID: 7070607613930990707}
+  _creditButton: {fileID: 8220728161479559267}
 --- !u!1 &6373543642619455483
 GameObject:
   m_ObjectHideFlags: 0

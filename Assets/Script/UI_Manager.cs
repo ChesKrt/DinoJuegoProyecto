@@ -75,5 +75,7 @@ public class UI_Manager : MonoBehaviour
 
 public static class IDWindow
 {
-    public static string Popup = "PopUp";
+    public static string Settings = "Settings";
+    public static string Lose = "Lose";
+    public static string MainMenu = "MainMenu";
 }

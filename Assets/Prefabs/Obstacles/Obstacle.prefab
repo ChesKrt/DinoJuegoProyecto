@@ -178,3 +178,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aeead5b149f92d4cb2574d3c86d8f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  fallSpeed: 5
+  finalPoint: -7

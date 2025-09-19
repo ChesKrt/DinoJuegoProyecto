@@ -1,16 +1,24 @@
 using UnityEngine;
+using DG.Tweening;
+using Unity.VisualScripting;
 
 public class Obstacle : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float fallSpeed = 0.5f;
+    
+    private Transform initialTransform;
+
     void Start()
     {
-        
+        initialTransform = transform;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
+    }
+
+    void OnDisable()
+    {
+        transform.position = initialTransform.position;
     }
 }

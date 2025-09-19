@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UI_PopUp : UI_Window
+public class UI_PopUp : UIWindow
 {
     
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UI_Lose : UIWindow
+public class UI_Lose : UI_Window
 {
     
 }

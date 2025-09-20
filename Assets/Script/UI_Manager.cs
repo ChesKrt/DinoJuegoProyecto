@@ -14,13 +14,13 @@ public class UI_Manager : MonoBehaviour
             Destroy(gameObject);
     }
     
-    [SerializeField] private List<UIWindow> uiWindows;
+    [SerializeField] private List<UI_Window> uiWindows;
     
     public void ShowUI(string windowUI)
     {
         foreach (var window in uiWindows)
         {
-            if (window.WindowID == windowUI)
+            if (window.WindowId == windowUI)
             {
                 window.Show();
                 return;
@@ -32,7 +32,7 @@ public class UI_Manager : MonoBehaviour
     {
         foreach (var window in uiWindows)
         {
-            if (window.WindowID == windowUI)
+            if (window.WindowId == windowUI)
             {
                 window.Hide();
                 return;
@@ -48,11 +48,11 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
-    public UIWindow GetWindow(string windowUI)
+    public UI_Window GetWindow(string windowUI)
     {
         foreach (var window in uiWindows)
         {
-            if (window.WindowID == windowUI)
+            if (window.WindowId == windowUI)
             {
                 return window;
             }
@@ -65,7 +65,7 @@ public class UI_Manager : MonoBehaviour
     private void GetAllWindows()
     {
         uiWindows.Clear();
-        UIWindow[] windows = FindObjectsByType<UIWindow>(FindObjectsSortMode.InstanceID);
+        UI_Window[] windows = FindObjectsByType<UI_Window>(FindObjectsSortMode.InstanceID);
         uiWindows.AddRange(windows);
     }
     #endregion

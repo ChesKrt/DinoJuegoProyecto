@@ -292,8 +292,10 @@ MonoBehaviour:
   windowCanvasGroup: {fileID: 3374672707665322215}
   hideOnStart: 0
   animationTime: 0.5
-  easeShow: 26
-  easeHide: 27
+  animationEaseShow: 0
+  animationEaseHide: 0
+  settingsButton: {fileID: 2589699751189696265}
+  startButton: {fileID: 5207151920757270497}
 --- !u!1 &5285717818315673042
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,10 +774,10 @@ RectTransform:
   - {fileID: 8704091973729243551}
   m_Father: {fileID: 5034994139090988177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.292, y: -224.1441}
-  m_SizeDelta: {x: 152.4056, y: 56.2881}
+  m_AnchorMin: {x: 0.30535674, y: 0.20388715}
+  m_AnchorMax: {x: 0.69315726, y: 0.26995298}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0.000015258789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7395145573795494606
 CanvasRenderer:

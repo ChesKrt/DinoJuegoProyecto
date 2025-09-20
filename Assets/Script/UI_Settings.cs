@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_Settings : UIWindow
+public class UI_Settings : UI_Window
 {
-    [SerializeField] private Button _closeButton;
-    [SerializeField] private Button _creditButton;
+    [SerializeField] private Button closeButton;
+    [SerializeField] private Button creditButton;
     
     public override void Initialize()
     {
         base.Initialize();
-        _closeButton.onClick.AddListener(() => Hide());
+        closeButton.onClick.AddListener(() => Hide());
     }
 }

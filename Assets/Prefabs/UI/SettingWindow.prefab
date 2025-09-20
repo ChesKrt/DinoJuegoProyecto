@@ -92,7 +92,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.6
+  m_fontSize: 25.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -703,7 +703,7 @@ RectTransform:
   - {fileID: 27566884369041919}
   m_Father: {fileID: 6586777619686813973}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.057485875, y: 0.24057339}
+  m_AnchorMin: {x: 0.057485875, y: 0.19651963}
   m_AnchorMax: {x: 0.9425141, y: 0.6964144}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -796,10 +796,10 @@ MonoBehaviour:
   windowCanvasGroup: {fileID: 3982811229263496104}
   hideOnStart: 1
   animationTime: 0.5
-  easeShow: 26
-  easeHide: 27
-  _closeButton: {fileID: 7070607613930990707}
-  _creditButton: {fileID: 8220728161479559267}
+  animationEaseShow: 33
+  animationEaseHide: 35
+  closeButton: {fileID: 7070607613930990707}
+  creditButton: {fileID: 8220728161479559267}
 --- !u!1 &6373543642619455483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,7 +1152,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.6
+  m_fontSize: 25.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

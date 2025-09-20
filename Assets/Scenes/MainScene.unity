@@ -319,8 +319,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_Manager
   uiWindows:
-  - {fileID: 7994407578406529926}
+  - {fileID: 8608976331486242014}
   - {fileID: 488454316}
+  - {fileID: 7994407578406529926}
 --- !u!1 &583332854
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,17 +743,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 510345632}
     m_Modifications:
-    - target: {fileID: 2259795636930425088, guid: a017323273d30e2419413f6ebe0af281, type: 3}
-      propertyPath: easeHide
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2259795636930425088, guid: a017323273d30e2419413f6ebe0af281, type: 3}
-      propertyPath: easeShow
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 2259795636930425088, guid: a017323273d30e2419413f6ebe0af281, type: 3}
-      propertyPath: hideOnStart
-      value: 1
+    - target: {fileID: 607995918814971438, guid: a017323273d30e2419413f6ebe0af281, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3706636772490504663, guid: a017323273d30e2419413f6ebe0af281, type: 3}
       propertyPath: m_AnchorMax.y
@@ -822,18 +815,6 @@ PrefabInstance:
     - target: {fileID: 3515185360793757823, guid: 75e8aad1fc146f940a3c5801195d38e1, type: 3}
       propertyPath: m_Name
       value: MainMenuWindow
-      objectReference: {fileID: 0}
-    - target: {fileID: 6214432370245659482, guid: 75e8aad1fc146f940a3c5801195d38e1, type: 3}
-      propertyPath: easeHide
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6214432370245659482, guid: 75e8aad1fc146f940a3c5801195d38e1, type: 3}
-      propertyPath: easeShow
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6214432370245659482, guid: 75e8aad1fc146f940a3c5801195d38e1, type: 3}
-      propertyPath: hideOnStart
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9072721310942081906, guid: 75e8aad1fc146f940a3c5801195d38e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -958,6 +939,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8737285768712852909, guid: 81ff3436ed47df945b7c328012465ae2, type: 3}
   m_PrefabInstance: {fileID: 8608976331486242012}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8608976331486242014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3942410365982140948, guid: 81ff3436ed47df945b7c328012465ae2, type: 3}
+  m_PrefabInstance: {fileID: 8608976331486242012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116c70d8cccb1a841b969b2f288d16b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_Lose
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

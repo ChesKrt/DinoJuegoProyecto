@@ -75,7 +75,8 @@ public class UI_Manager : MonoBehaviour
 
 public static class IDWindow
 {
-    public static string Settings = "Settings";
-    public static string Lose = "Lose";
-    public static string MainMenu = "MainMenu";
+    public const string Settings = "Settings";
+    public const string Lose = "Lose";
+    public const string MainMenu = "MainMenu";
+    public const string Inventory = "Inventory";
 }

@@ -79,4 +79,5 @@ public static class IDWindow
     public const string Lose = "Lose";
     public const string MainMenu = "MainMenu";
     public const string Inventory = "Inventory";
+    public const string InGame = "InGame";
 }

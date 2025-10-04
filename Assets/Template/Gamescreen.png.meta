@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9acb37f4c24567f43a5e06ceb9471f16
+guid: 24a2484c3fa902348a141f03ddc28b3a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8214574731468943847
-    second: Arrow_Left_0
+      213: -8115110171974165412
+    second: Gamescreen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icon_ExclamationMark_0
+      name: Gamescreen_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3
-        height: 9
+        width: 393
+        height: 852
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0666300ba1ce1dca0800000000000000
-      internalID: -5993750029687101856
+      spriteID: c5c12565b46516f80800000000000000
+      internalID: -8115110171974165412
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Icon_ExclamationMark_0: -5993750029687101856
+      Gamescreen_0: -8115110171974165412
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

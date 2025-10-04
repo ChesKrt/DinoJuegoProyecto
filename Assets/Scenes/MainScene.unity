@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoseWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 5626978226398325361, guid: 81ff3436ed47df945b7c328012465ae2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8737285768712852909, guid: 81ff3436ed47df945b7c328012465ae2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 213.17426
@@ -270,7 +274,7 @@ Transform:
   m_GameObject: {fileID: 157964225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -370,6 +374,7 @@ Transform:
   - {fileID: 7994407578406529923}
   - {fileID: 488454315}
   - {fileID: 11205176}
+  - {fileID: 584300285}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &510345633
@@ -385,9 +390,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_Manager
   uiWindows:
+  - {fileID: 584300286}
+  - {fileID: 634385371}
   - {fileID: 488454316}
   - {fileID: 7994407578406529926}
-  - {fileID: 0}
 --- !u!1 &583332854
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +428,33 @@ Transform:
   - {fileID: 395294960}
   m_Father: {fileID: 795807174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &584300285 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5543987560213376851, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+  m_PrefabInstance: {fileID: 6987562623260465114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &584300286 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6605081772058321990, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+  m_PrefabInstance: {fileID: 6987562623260465114}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6296296916cb594e8d3319476e48b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_InGame
+--- !u!114 &634385371 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3942410365982140948, guid: 81ff3436ed47df945b7c328012465ae2, type: 3}
+  m_PrefabInstance: {fileID: 11205175}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116c70d8cccb1a841b969b2f288d16b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_Lose
 --- !u!1 &692781117
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,11 +1019,80 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 6307274232507725058, guid: a017323273d30e2419413f6ebe0af281, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a017323273d30e2419413f6ebe0af281, type: 3}
+--- !u!1001 &6987562623260465114
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 510345632}
+    m_Modifications:
+    - target: {fileID: 5543987560213376851, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543987560213376851, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543987560213376851, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543987560213376851, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543987560213376851, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543987560213376851, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543987560213376851, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543987560213376851, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543987560213376851, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5543987560213376851, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617223732825364610, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_Name
+      value: InGameWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281094759000209321, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000015258789
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281094759000209321, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000038146973
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
 --- !u!1001 &7994407578406529922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1003,9 +1105,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 3515185360793757823, guid: 75e8aad1fc146f940a3c5801195d38e1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6214432370245659482, guid: 75e8aad1fc146f940a3c5801195d38e1, type: 3}
       propertyPath: hideOnStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9072721310942081906, guid: 75e8aad1fc146f940a3c5801195d38e1, type: 3}
       propertyPath: m_LocalPosition.x

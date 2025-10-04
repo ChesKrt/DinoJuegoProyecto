@@ -6,6 +6,16 @@ using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+    
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+    }
+    
     [SerializeField] private float moveSpeed = 0.5f;
     [SerializeField] private Vector2 limitX = new Vector2(-5, 5f);
 

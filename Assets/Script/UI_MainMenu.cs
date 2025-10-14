@@ -26,7 +26,8 @@ public class UI_MainMenu : UI_Window
 
     private void StartingGame()
     {
-        Hide();
+        Hide(true);
+        UI_Manager.instance.ShowUI(IDWindow.InGame);
     }
 
 }

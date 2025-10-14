@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 510345632}
     m_Modifications:
+    - target: {fileID: 3942410365982140948, guid: 81ff3436ed47df945b7c328012465ae2, type: 3}
+      propertyPath: hideOnStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4531437794989539370, guid: 81ff3436ed47df945b7c328012465ae2, type: 3}
       propertyPath: m_SortingOrder
       value: 0
@@ -390,9 +394,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_Manager
   uiWindows:
+  - {fileID: 488454316}
   - {fileID: 584300286}
   - {fileID: 634385371}
-  - {fileID: 488454316}
   - {fileID: 7994407578406529926}
 --- !u!1 &583332854
 GameObject:
@@ -963,6 +967,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 510345632}
     m_Modifications:
+    - target: {fileID: 2259795636930425088, guid: a017323273d30e2419413f6ebe0af281, type: 3}
+      propertyPath: hideOnStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3181978126751495369, guid: a017323273d30e2419413f6ebe0af281, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -1076,6 +1084,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6605081772058321990, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
+      propertyPath: hideOnStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6617223732825364610, guid: caae838f4ac8df64db0b646ae8f909ed, type: 3}
       propertyPath: m_Name
       value: InGameWindow
@@ -1111,7 +1123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6214432370245659482, guid: 75e8aad1fc146f940a3c5801195d38e1, type: 3}
       propertyPath: hideOnStart
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9072721310942081906, guid: 75e8aad1fc146f940a3c5801195d38e1, type: 3}
       propertyPath: m_LocalPosition.x

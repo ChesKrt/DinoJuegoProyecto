@@ -66,5 +66,6 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
     },
-    "dotnet.defaultSolution": "DinoJuegoProyecto.sln"
+    "dotnet.defaultSolution": "DinoJuegoProyecto.sln",
+    "dotnet.preferCSharpExtension": true
 }

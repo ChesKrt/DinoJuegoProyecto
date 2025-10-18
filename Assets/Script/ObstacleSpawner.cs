@@ -12,8 +12,11 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private ObstacleDetector detector;
 
     private int _lastSpawn = 1;
+    private float _timer = 0f;
+    [SerializeField] private float _spawnInterval = 2f;
     
-    void Start()
+    public bool startSpawning = false;
+    void OnEnable()
     {
         detector.OnObstacleDetected.AddListener(OnObstacleDetected);
     }
@@ -21,6 +24,19 @@ public class ObstacleSpawner : MonoBehaviour
     private void OnObstacleDetected(GameObject obstacle)
     {
         DestroyObstacle(obstacle);
+    }
+
+    private void Update()
+    {
+        if (startSpawning)
+        {
+            _timer += Time.deltaTime;
+            if (_timer > _spawnInterval)
+            {
+                SpawnObstacle();
+                _timer = 0f;
+            }
+        }
     }
 
     [Button]

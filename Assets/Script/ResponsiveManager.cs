@@ -1,5 +1,4 @@
 using System;
-using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -22,6 +21,11 @@ public class ResponsiveManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+    }
+
+    public void Start()
+    {
+        Debug.Log($"[ResponsiveManager] Current Orientation: {CurrentOrientation}, Device Type: {CurrentDeviceType}, Screen Size: {CurrentScreenSize}");
     }
 
     private void OnEnable()

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class UI_MainMenu : UI_Window
 {
@@ -28,6 +29,7 @@ public class UI_MainMenu : UI_Window
     {
         Hide(true);
         UI_Manager.instance.ShowUI(IDWindow.InGame);
+        GameManager.instance.GameStarted(true);
     }
 
 }

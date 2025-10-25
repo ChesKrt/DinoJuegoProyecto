@@ -21,4 +21,13 @@ public class Obstacle : MonoBehaviour
     {
         transform.position = initialTransform.position;
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.GetComponent<Player>() != null)
+        {
+            GameManager.instance.GameFinished(true);
+            gameObject.SetActive(false);
+        }
+    }
 }

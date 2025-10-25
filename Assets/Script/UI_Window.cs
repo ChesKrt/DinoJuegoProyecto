@@ -16,7 +16,7 @@ public class UI_Window : MonoBehaviour
     [SerializeField] private Ease animationEaseShow;
     [SerializeField] private Ease animationEaseHide;
     
-    public bool IsShowing { get; private set; } = false;
+    public bool IsShowing = false;
     public string WindowId => windowID;
 
     private void Start()
@@ -54,6 +54,7 @@ public class UI_Window : MonoBehaviour
         if (instant)
         {
             windowCanvasGroup.transform.DOScale(Vector3.zero, 0f);
+            DisableCanvas();
         }
         else
         {

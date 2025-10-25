@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,8 @@ public class UI_InGame : UI_Window
     [SerializeField] private Button _configurationButton;
     [SerializeField] private Button _moveLeftButton;
     [SerializeField] private Button _moveRightButton;
-
+    [SerializeField] private TextMeshProUGUI _scoreText;
+    
     public override void Initialize()
     {
         base.Initialize();
@@ -36,5 +38,10 @@ public class UI_InGame : UI_Window
     private void MoveRight()
     {
         Player.instance.MoveRight();
+    }
+
+    public void UpdateScore(int score)
+    {
+        _scoreText.text = score.ToString();
     }
 }

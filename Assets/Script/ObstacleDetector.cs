@@ -10,7 +10,6 @@ public class ObstacleDetector : MonoBehaviour
     {
         if (collision.GetComponent<Obstacle>())
         {
-            Debug.Log("Obstacle");
             OnObstacleDetected?.Invoke(collision.gameObject);
         }
     }

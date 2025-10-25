@@ -14,6 +14,9 @@ public class ObstacleSpawner : MonoBehaviour
     private int _lastSpawn = 1;
     private float _timer = 0f;
     [SerializeField] private float _spawnInterval = 2f;
+    [SerializeField] private int _scoreToIncreaseDifficulty = 10;
+    
+    private bool _changeSpawnInterval = true;
     
     public bool startSpawning = false;
     void OnEnable()
@@ -30,6 +33,17 @@ public class ObstacleSpawner : MonoBehaviour
     {
         if (startSpawning)
         {
+            if (GameManager.instance.score >= _scoreToIncreaseDifficulty && _changeSpawnInterval)
+            {
+                if (_spawnInterval < 0.5f)
+                {
+                    _changeSpawnInterval = false;
+                    return;
+                }
+                _spawnInterval -= 0.2f;
+                _scoreToIncreaseDifficulty += 10;
+            }
+            
             _timer += Time.deltaTime;
             if (_timer > _spawnInterval)
             {

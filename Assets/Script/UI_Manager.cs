@@ -16,25 +16,25 @@ public class UI_Manager : MonoBehaviour
     
     [SerializeField] private List<UI_Window> uiWindows;
     
-    public void ShowUI(string windowUI)
+    public void ShowUI(string windowUI, bool instant = false)
     {
         foreach (var window in uiWindows)
         {
             if (window.WindowId == windowUI)
             {
-                window.Show();
+                window.Show(instant);
                 return;
             }
         }
     }
 
-    public void CloseUI(string windowUI)
+    public void CloseUI(string windowUI, bool instant = false)
     {
         foreach (var window in uiWindows)
         {
             if (window.WindowId == windowUI)
             {
-                window.Hide();
+                window.Hide(instant);
                 return;
             }
         }

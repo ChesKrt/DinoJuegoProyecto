@@ -398,7 +398,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1066,8 +1066,10 @@ MonoBehaviour:
   animationTime: 0.5
   animationEaseShow: 33
   animationEaseHide: 35
+  IsShowing: 0
   closeButton: {fileID: 7070607613930990707}
   creditButton: {fileID: 8220728161479559267}
+  isFromInGame: 0
 --- !u!1 &6373543642619455483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,8 +1104,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 10.3594, y: 0}
-  m_SizeDelta: {x: 40.7188, y: 0}
+  m_AnchoredPosition: {x: 22.153809, y: 0}
+  m_SizeDelta: {x: 90.7845, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4900772972909759369
 CanvasRenderer:

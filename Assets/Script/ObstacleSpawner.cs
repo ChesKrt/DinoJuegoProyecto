@@ -1,10 +1,14 @@
+using System;
 using NaughtyAttributes;
 using UnityEngine;
 using System.Collections.Generic;
+using Random = UnityEngine.Random;
 
 public class ObstacleSpawner : MonoBehaviour
 {
 
+    public static ObstacleSpawner instance;
+    
     [SerializeField] private GameObject obstaclePrefab;
 
     [SerializeField] private Transform[] spawnPoints;
@@ -13,7 +17,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     private int _lastSpawn = 1;
     private float _timer = 0f;
-    [SerializeField] private float _spawnInterval = 2f;
+    public float spawnInterval = 2f;
     [SerializeField] private int _scoreToIncreaseDifficulty = 10;
     
     private bool _changeSpawnInterval = true;
@@ -22,6 +26,19 @@ public class ObstacleSpawner : MonoBehaviour
     void OnEnable()
     {
         detector.OnObstacleDetected.AddListener(OnObstacleDetected);
+    }
+    
+    void OnDisable()
+    {
+        detector.OnObstacleDetected.RemoveListener(OnObstacleDetected);
+    }
+
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
     }
 
     private void OnObstacleDetected(GameObject obstacle)
@@ -35,17 +52,17 @@ public class ObstacleSpawner : MonoBehaviour
         {
             if (GameManager.instance.score >= _scoreToIncreaseDifficulty && _changeSpawnInterval)
             {
-                if (_spawnInterval < 0.5f)
+                if (spawnInterval < 0.5f)
                 {
                     _changeSpawnInterval = false;
                     return;
                 }
-                _spawnInterval -= 0.2f;
+                spawnInterval -= 0.2f;
                 _scoreToIncreaseDifficulty += 10;
             }
             
             _timer += Time.deltaTime;
-            if (_timer > _spawnInterval)
+            if (_timer > spawnInterval)
             {
                 SpawnObstacle();
                 _timer = 0f;

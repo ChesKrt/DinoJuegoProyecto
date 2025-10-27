@@ -29,6 +29,7 @@ public class UI_MainMenu : UI_Window
     {
         Hide(true);
         UI_Manager.instance.ShowUI(IDWindow.InGame);
+        ObstacleSpawner.instance.spawnInterval = 2f;
         GameManager.instance.GameStarted(true);
     }
 

@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
             UI_Manager.instance.ShowUI(IDWindow.InGame, true);
             player.transform.position = new Vector3(0, player.transform.position.y, player.transform.position.z);
             obstacleSpawner.startSpawning = true;
+            AudioManager.instance.PlayBackgroundMusic(0);
         }
     }
 
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
             UI_Manager.instance.ShowUI(IDWindow.Lose);
             ScoreUpdated();
             SentBestScore();
+            AudioManager.instance.StopBackgroundMusic(0);
         }
     }
 

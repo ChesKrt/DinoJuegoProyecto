@@ -31,6 +31,7 @@ public class UI_Lose : UI_Window
         UI_Manager.instance.ShowUI(IDWindow.InGame);
         // UI_InGame inGame = UI_Manager.instance.GetWindow(IDWindow.InGame) as UI_InGame;
         // inGame.HardCodeRectTransform();
+        ObstacleSpawner.instance.spawnInterval = 2f;
         GameManager.instance.GameStarted(true);
         Hide(true);
     }

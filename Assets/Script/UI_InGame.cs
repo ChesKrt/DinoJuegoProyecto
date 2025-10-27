@@ -1,3 +1,4 @@
+using System;   
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,7 +28,10 @@ public class UI_InGame : UI_Window
     
     private void OpenConfiguration()
     {
+        UI_Settings uiSettings = UI_Manager.instance.GetWindow(IDWindow.Settings) as UI_Settings;
+        uiSettings.isFromInGame = true;
         UI_Manager.instance.ShowUI(IDWindow.Settings);
+        GameManager.instance.obstacleSpawner.startSpawning = false;
     }
     
     private void MoveLeft()

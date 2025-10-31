@@ -19,11 +19,19 @@ public class AudioManager : MonoBehaviour
         
         if (_audioSource == null)
             _audioSource = FindFirstObjectByType<AudioSource>();
+
+
+        _slider.value = PlayerPrefs.GetFloat(ConstanceJson.VOLUME);
     }
 
     void Update()
     {
         _audioSource.volume = _slider.value;
+    }
+
+    public void ApplyChange()
+    {
+        PlayerPrefs.SetFloat(ConstanceJson.VOLUME, _slider.value);
     }
     
     public void PlayBackgroundMusic(int index)

@@ -22,6 +22,7 @@ public class UI_MainMenu : UI_Window
 
     private void OpenSettings()
     {
+        Hide(true);
         UI_Manager.instance.ShowUI(IDWindow.Settings);
     }
 

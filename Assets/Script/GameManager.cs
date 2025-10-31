@@ -5,17 +5,17 @@ using NaughtyAttributes;
 
 public class GameManager : MonoBehaviour
 {
-    
+
     public static GameManager instance;
-    
+
     public ObstacleSpawner obstacleSpawner;
     public Player player;
 
     public UnityEvent<bool> StartingPinguGame { private get; set; } = new UnityEvent<bool>();
-    
+
     public int score;
     private int _bestScore;
-    
+
     private string pathOfFile;
     private string readJsonFile;
     private PlayerStats playerStats;
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         SentScoreToUI();
     }
-    
+
     public void GameStarted(bool isGameStarted = false)
     {
         if (isGameStarted)
@@ -84,14 +84,14 @@ public class GameManager : MonoBehaviour
             loseUI.UpdateBestScore(_bestScore);
         }
     }
-    
+
     private void ScoreUpdated()
     {
         if (!File.Exists(pathOfFile))
         {
             File.WriteAllText(pathOfFile, ConstanceJson.ANDROID_JSON);
         }
-        
+
         readJsonFile = File.ReadAllText(pathOfFile);
         playerStats = JsonUtility.FromJson<PlayerStats>(readJsonFile);
 
@@ -99,28 +99,29 @@ public class GameManager : MonoBehaviour
         {
             playerStats.playerBestScore = score;
         }
-        
+
         _bestScore = playerStats.playerBestScore;
-        
+
         readJsonFile = JsonUtility.ToJson(playerStats, true);
         File.WriteAllText(pathOfFile, readJsonFile);
     }
-    
+
     [Button]
     void TestOpenGameUI()
     {
         UI_Manager.instance.ShowUI(IDWindow.InGame);
     }
-    
+
     [Button]
     void TestHideGameUI()
     {
         UI_Manager.instance.CloseUI(IDWindow.InGame);
     }
 
-    
+
 }
-    public class ConstanceJson
-    {
-        public const string ANDROID_JSON = "{\n    \"playerBestScore\": 0,\n    \"playerBestScores\": []\n}";
-    }
+public class ConstanceJson
+{
+    public const string ANDROID_JSON = "{\n    \"playerBestScore\": 0,\n    \"playerBestScores\": []\n}";
+    public static string VOLUME;
+}

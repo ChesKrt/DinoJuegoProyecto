@@ -21,14 +21,18 @@ public class UI_Settings : UI_Window
 
     private void CloseWindow(bool isFromInGame = false)
     {
+        AudioManager.instance.ApplyChange();
+
         if (isFromInGame)
         {
             Hide();
+            UI_Manager.instance.ShowUI(IDWindow.InGame);
             GameManager.instance.obstacleSpawner.startSpawning = true;
         }
         else
         {
             Hide();
+            UI_Manager.instance.ShowUI(IDWindow.MainMenu, true);
         }
     }
 }

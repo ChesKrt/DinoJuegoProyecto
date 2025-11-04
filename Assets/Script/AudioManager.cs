@@ -21,7 +21,7 @@ public class AudioManager : MonoBehaviour
             _audioSource = FindFirstObjectByType<AudioSource>();
 
 
-        _slider.value = PlayerPrefs.GetFloat(ConstanceJson.VOLUME);
+        _slider.value = PlayerPrefs.GetFloat(ConstanceJson.VOLUME, 1);
     }
 
     void Update()

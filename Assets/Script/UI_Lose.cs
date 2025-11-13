@@ -39,6 +39,7 @@ public class UI_Lose : UI_Window
     private void MainMenu()
     {
         Hide(true);
+        GameManager.instance.GameMenuStarte();
         UI_Manager.instance.ShowUI(IDWindow.MainMenu);
     }
 }

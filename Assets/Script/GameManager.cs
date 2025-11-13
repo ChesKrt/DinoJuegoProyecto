@@ -1,7 +1,9 @@
+using DG.Tweening;
+using NaughtyAttributes;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Events;
-using System.IO;
-using NaughtyAttributes;
+using static UnityEngine.GraphicsBuffer;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     public ObstacleSpawner obstacleSpawner;
     public Player player;
+
+    public GameObject[] MainMenu;
+    public Vector2 menuOut;
 
     public UnityEvent<bool> StartingPinguGame { private get; set; } = new UnityEvent<bool>();
 
@@ -46,6 +51,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameStarted)
         {
+            GameMenuStarte(true);
             score = 0;
             UI_Manager.instance.ShowUI(IDWindow.InGame, true);
             player.transform.position = new Vector3(0, player.transform.position.y, player.transform.position.z);
@@ -106,19 +112,22 @@ public class GameManager : MonoBehaviour
         File.WriteAllText(pathOfFile, readJsonFile);
     }
 
-    [Button]
-    void TestOpenGameUI()
+    public void GameMenuStarte(bool starting = false)
     {
-        UI_Manager.instance.ShowUI(IDWindow.InGame);
+
+        if (starting)
+        {
+            float target01 = Mathf.Clamp(transform.position.x + 10, -10, 10);
+            MainMenu[0].transform.DOMoveX(target01, menuOut.x);
+            MainMenu[1].transform.DOMoveX(target01, menuOut.x);
+        }
+        else
+        {
+            float target02 = Mathf.Clamp(transform.position.x + 0, 0, 10);
+            MainMenu[0].transform.DOMoveX(target02, menuOut.y);
+            MainMenu[1].transform.DOMoveX(target02, menuOut.y);
+        }
     }
-
-    [Button]
-    void TestHideGameUI()
-    {
-        UI_Manager.instance.CloseUI(IDWindow.InGame);
-    }
-
-
 }
 public class ConstanceJson
 {

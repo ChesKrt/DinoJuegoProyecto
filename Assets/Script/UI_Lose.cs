@@ -28,6 +28,7 @@ public class UI_Lose : UI_Window
     
     private void Restart()
     {
+        GameManager.instance.LoseMenuStarte();
         UI_Manager.instance.ShowUI(IDWindow.InGame);
         // UI_InGame inGame = UI_Manager.instance.GetWindow(IDWindow.InGame) as UI_InGame;
         // inGame.HardCodeRectTransform();
@@ -39,6 +40,9 @@ public class UI_Lose : UI_Window
     private void MainMenu()
     {
         Hide(true);
+        AudioManager.instance.PlayBackgroundMusic(1);
+        GameManager.instance.LoseMenuStarte(true);
+        GameManager.instance.LoseMenuStarte();
         GameManager.instance.GameMenuStarte();
         UI_Manager.instance.ShowUI(IDWindow.MainMenu);
     }

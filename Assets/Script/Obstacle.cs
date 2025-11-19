@@ -27,6 +27,7 @@ public class Obstacle : MonoBehaviour
         if (other.gameObject.GetComponent<Player>() != null)
         {
             GameManager.instance.GameFinished(true);
+            AudioManager.instance.PlayClip(0);
             gameObject.SetActive(false);
         }
     }

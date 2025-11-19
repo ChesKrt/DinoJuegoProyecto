@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     
     [SerializeField] private Slider _slider;
     public AudioClip[] backgroundMusics;
+    public AudioClip[] soundEffects;
     private AudioSource _audioSource;
     
     private void Awake()
@@ -21,16 +22,17 @@ public class AudioManager : MonoBehaviour
             _audioSource = FindFirstObjectByType<AudioSource>();
 
 
-        _slider.value = PlayerPrefs.GetFloat(ConstanceJson.VOLUME, 1);
+        _audioSource.volume = PlayerPrefs.GetFloat(ConstanceJson.VOLUME, 1);
     }
 
-    void Update()
+    private void Update()
     {
-        _audioSource.volume = _slider.value;
+        _slider.value = _audioSource.volume;
     }
 
     public void ApplyChange()
     {
+        _audioSource.volume = _slider.value;
         PlayerPrefs.SetFloat(ConstanceJson.VOLUME, _slider.value);
     }
     
@@ -44,5 +46,10 @@ public class AudioManager : MonoBehaviour
     {
         _audioSource.clip = backgroundMusics[index];
         _audioSource.Stop();
+    }
+
+    public void PlayClip(int index)
+    {
+        _audioSource.PlayOneShot(soundEffects[index]);
     }
 }

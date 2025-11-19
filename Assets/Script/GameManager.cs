@@ -14,7 +14,9 @@ public class GameManager : MonoBehaviour
     public Player player;
 
     public GameObject[] MainMenu;
+    public GameObject LoseMenu;
     public Vector2 menuOut;
+    public Vector2 loseOut;
 
     public UnityEvent<bool> StartingPinguGame { private get; set; } = new UnityEvent<bool>();
 
@@ -64,6 +66,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameFinished)
         {
+            LoseMenuStarte(true);
             obstacleSpawner.startSpawning = false;
             UI_Manager.instance.CloseUI(IDWindow.InGame, true);
             UI_Manager.instance.ShowUI(IDWindow.Lose);
@@ -126,6 +129,20 @@ public class GameManager : MonoBehaviour
             float target02 = Mathf.Clamp(transform.position.x + 0, 0, 10);
             MainMenu[0].transform.DOMoveX(target02, menuOut.y);
             MainMenu[1].transform.DOMoveX(target02, menuOut.y);
+        }
+    }
+
+    public void LoseMenuStarte(bool starting = false)
+    {
+        if (starting)
+        {
+            float target01 = Mathf.Clamp(transform.position.y + 0, 0, 20);
+            LoseMenu.transform.DOMoveY(target01, menuOut.y);
+        }
+        else
+        {
+            float target02 = Mathf.Clamp(transform.position.y + 20, -20, 20);
+            LoseMenu.transform.DOMoveY(target02, menuOut.y);
         }
     }
 }
